@@ -14,8 +14,8 @@ This repository contains my daily HTML5 practice as I prepare for a Python Full 
 * ✅ Day 4 – Forms
 * ✅ Day 5 – Advanced Forms
 * ✅ Day 6 – Semantic HTML
-*  ✅ Day 07 – HTML5 Multimedia
-* ⏳ Day 8 – HTML5 Features
+* ✅ Day 07 – HTML5 Multimedia
+* ✅Day 8 – HTML5 Features
 * ⏳ Day 9 – Portfolio Website
 * ⏳ Day 10 – Travel Website
 
@@ -26,7 +26,7 @@ This repository contains my daily HTML5 practice as I prepare for a Python Full 
 * Git
 * GitHub
 
-## Goal
+## Goal4
 
 To build a strong foundation in HTML5 and become a Python Full Stack Developer.
 

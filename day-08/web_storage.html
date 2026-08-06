@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage Example</title>
+</head>
+<body>
+
+    <h1>HTML5 Web Storage</h1>
+
+    <button onclick="saveData()">Save Name</button>
+    <button onclick="showData()">Show Name</button>
+    <button onclick="removeData()">Remove Name</button>
+
+    <script>
+
+        function saveData() {
+            localStorage.setItem("username", "Bhanu");
+            alert("Name Saved!");
+        }
+
+        function showData() {
+            let name = localStorage.getItem("username");
+            alert(name);
+        }
+
+        function removeData() {
+            localStorage.removeItem("username");
+            alert("Name Removed!");
+        }
+
+    </script>
+
+</body>
+</html>

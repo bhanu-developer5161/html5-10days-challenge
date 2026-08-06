@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+HTML5 API Dashboard
+</title>
+
+
+<style>
+
+body{
+
+font-family:Arial;
+text-align:center;
+
+}
+
+
+.card{
+
+width:150px;
+padding:20px;
+background:orange;
+color:white;
+margin:20px auto;
+cursor:move;
+
+}
+
+
+.drop{
+
+width:300px;
+height:150px;
+border:3px dashed blue;
+margin:auto;
+padding:20px;
+
+}
+
+
+canvas{
+
+border:2px solid black;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<h1>
+HTML5 API Dashboard
+</h1>
+
+
+<hr>
+
+
+<h2>
+1. Web Storage
+</h2>
+
+
+<input id="name"
+placeholder="Enter name">
+
+
+<button onclick="saveName()">
+Save
+</button>
+
+
+<p id="displayName"></p>
+
+
+
+<hr>
+
+
+
+<h2>
+2. Geolocation
+</h2>
+
+
+<button onclick="getLocation()">
+Get Location
+</button>
+
+
+<p id="location"></p>
+
+
+
+<hr>
+
+
+
+<h2>
+3. Drag and Drop
+</h2>
+
+
+<div class="drop"
+ondrop="drop(event)"
+ondragover="allowDrop(event)">
+
+Drop Here
+
+</div>
+
+
+<div class="card"
+draggable="true"
+ondragstart="drag(event)"
+id="box">
+
+Drag Me
+
+</div>
+
+
+
+<hr>
+
+
+
+<h2>
+4. Canvas
+</h2>
+
+
+<canvas id="canvas"
+width="400"
+height="250">
+
+</canvas>
+
+
+
+<hr>
+
+
+
+<h2>
+5. SVG
+</h2>
+
+
+<svg width="300"
+height="200">
+
+
+<circle
+cx="150"
+cy="100"
+r="60"
+fill="green">
+
+
+</circle>
+
+
+<text
+x="90"
+y="110"
+font-size="25"
+fill="white">
+
+SVG
+
+</text>
+
+
+</svg>
+
+
+
+
+<script>
+
+
+// Web Storage
+
+
+function saveName(){
+
+let name =
+document.getElementById("name").value;
+
+
+localStorage.setItem(
+"username",
+name
+);
+
+
+document.getElementById(
+"displayName"
+).innerHTML =
+"Welcome "+name;
+
+}
+
+
+
+
+// Geolocation
+
+
+function getLocation(){
+
+
+if(navigator.geolocation){
+
+
+navigator.geolocation.getCurrentPosition(
+showPosition
+);
+
+
+}
+
+}
+
+
+function showPosition(position){
+
+
+document.getElementById(
+"location"
+).innerHTML =
+
+"Latitude: "
++
+position.coords.latitude
++
+"<br>"
++
+"Longitude: "
++
+position.coords.longitude;
+
+
+}
+
+
+
+
+// Drag Drop
+
+
+function allowDrop(event){
+
+event.preventDefault();
+
+}
+
+
+function drag(event){
+
+event.dataTransfer.setData(
+"text",
+event.target.id
+);
+
+}
+
+
+function drop(event){
+
+event.preventDefault();
+
+
+let data =
+event.dataTransfer.getData(
+"text"
+);
+
+
+event.target.appendChild(
+document.getElementById(data)
+);
+
+
+}
+
+
+
+
+// Canvas
+
+
+let canvas =
+document.getElementById(
+"canvas"
+);
+
+
+let ctx =
+canvas.getContext(
+"2d"
+);
+
+
+
+ctx.fillStyle="blue";
+
+ctx.fillRect(
+50,
+50,
+150,
+80
+);
+
+
+
+ctx.beginPath();
+
+ctx.arc(
+280,
+90,
+40,
+0,
+Math.PI*2
+);
+
+
+ctx.fillStyle="red";
+
+ctx.fill();
+
+
+
+ctx.font="30px Arial";
+
+ctx.fillStyle="black";
+
+ctx.fillText(
+"Canvas",
+120,
+200
+);
+
+
+
+</script>
+
+
+</body>
+
+</html>

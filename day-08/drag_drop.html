@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drag and Drop</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+}
+
+#box{
+
+    width:300px;
+    height:200px;
+    border:3px dashed blue;
+    margin:30px auto;
+    padding:20px;
+}
+
+#dragItem{
+
+    width:150px;
+    padding:15px;
+    background:orange;
+    color:white;
+    cursor:move;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>HTML5 Drag and Drop</h1>
+
+<div id="box"
+     ondrop="drop(event)"
+     ondragover="allowDrop(event)">
+
+Drop Here
+
+</div>
+
+<br>
+
+<div id="dragItem"
+     draggable="true"
+     ondragstart="drag(event)">
+
+Drag Me
+
+</div>
+
+<script>
+
+function allowDrop(event){
+
+event.preventDefault();
+
+}
+
+function drag(event){
+
+event.dataTransfer.setData("text", event.target.id);
+
+}
+
+function drop(event){
+
+event.preventDefault();
+
+let data=event.dataTransfer.getData("text");
+
+event.target.appendChild(document.getElementById(data));
+
+}
+
+</script>
+
+</body>
+</html>

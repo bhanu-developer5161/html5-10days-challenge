@@ -1,0 +1,413 @@
+# Day 08 – HTML5 APIs & Advanced Features
+
+## 🎯 Objective
+
+Learn how HTML5 APIs make web applications interactive, dynamic, and user-friendly.
+
+---
+
+# What is an API?
+
+**API** stands for **Application Programming Interface**.
+
+An API is a set of rules that allows two software components to communicate with each other.
+
+In web development, HTML5 APIs allow JavaScript to interact with browser features such as:
+
+* Browser Storage
+* User Location
+* Graphics
+* Drag & Drop
+* Multimedia
+
+---
+
+# What are HTML5 APIs?
+
+HTML5 APIs are built-in browser features that extend the functionality of HTML.
+
+They allow developers to create modern web applications without external plugins.
+
+Examples include:
+
+* Web Storage
+* Geolocation
+* Drag and Drop
+* Canvas
+* SVG
+
+---
+
+# Why HTML5 APIs are Important
+
+* Build interactive websites
+* Improve user experience
+* Reduce server requests
+* Store data locally
+* Access browser capabilities
+* Create modern web applications
+
+---
+
+# 1. Web Storage API
+
+## Definition
+
+The Web Storage API stores data directly inside the browser.
+
+There are two types:
+
+### localStorage
+
+Stores data permanently until it is manually removed.
+
+Example Uses
+
+* Dark Mode Preference
+* Shopping Cart
+* User Settings
+* Language Selection
+
+### sessionStorage
+
+Stores data only for the current browser tab.
+
+Data is deleted when the tab or browser is closed.
+
+Example Uses
+
+* Login Session
+* Temporary Form Data
+* OTP Verification
+
+---
+
+## Difference Between localStorage and sessionStorage
+
+| Feature            | localStorage   | sessionStorage           |
+| ------------------ | -------------- | ------------------------ |
+| Lifetime           | Permanent      | Until browser/tab closes |
+| Shared Across Tabs | Yes            | No                       |
+| Storage Limit      | Around 5–10 MB | Around 5–10 MB           |
+
+---
+
+# 2. Geolocation API
+
+## Definition
+
+The Geolocation API retrieves the user's current location after permission is granted.
+
+---
+
+## Uses
+
+* Google Maps
+* Food Delivery Apps
+* Ride Booking Apps
+* Weather Apps
+* Nearby Hospitals
+* Nearby Restaurants
+
+---
+
+## Advantages
+
+* Accurate location
+* Easy navigation
+* Better user experience
+
+---
+
+## Limitations
+
+* Requires permission
+* May not work offline
+* Accuracy depends on GPS and network
+
+---
+
+# 3. Drag and Drop API
+
+## Definition
+
+Allows users to drag an element and drop it into another location.
+
+---
+
+## Real World Examples
+
+* Trello
+* Kanban Boards
+* File Upload Systems
+* Image Managers
+
+---
+
+## Advantages
+
+* Easy to use
+* Interactive
+* Improves user experience
+
+---
+
+# 4. Canvas API
+
+## Definition
+
+Canvas allows drawing graphics using JavaScript.
+
+---
+
+## Uses
+
+* Games
+* Charts
+* Paint Applications
+* Animations
+* Image Editing
+
+---
+
+## Advantages
+
+* Fast rendering
+* Dynamic graphics
+* Suitable for games
+
+---
+
+## Limitations
+
+* Requires JavaScript
+* Graphics are pixel-based
+* Not ideal for scalable graphics
+
+---
+
+# 5. SVG
+
+## Definition
+
+SVG stands for **Scalable Vector Graphics**.
+
+SVG graphics remain sharp even when zoomed.
+
+---
+
+## Uses
+
+* Logos
+* Icons
+* Charts
+* Diagrams
+* Maps
+
+---
+
+## Advantages
+
+* High quality
+* Lightweight
+* Easy to style with CSS
+* Search engine friendly
+
+---
+
+# Canvas vs SVG
+
+| Canvas              | SVG                             |
+| ------------------- | ------------------------------- |
+| Pixel-based         | Vector-based                    |
+| Requires JavaScript | Can be written directly in HTML |
+| Best for games      | Best for icons and logos        |
+| Harder to edit      | Easy to edit                    |
+
+---
+
+# Browser Support
+
+Most HTML5 APIs are supported by:
+
+* Google Chrome
+* Microsoft Edge
+* Mozilla Firefox
+* Safari
+* Opera
+
+---
+
+# Best Practices
+
+* Use semantic HTML.
+* Check browser compatibility.
+* Request permission before using Geolocation.
+* Do not store passwords in localStorage.
+* Use HTTPS when accessing sensitive browser APIs.
+* Validate and sanitize user input.
+
+---
+
+# Common Mistakes
+
+❌ Storing sensitive information in localStorage
+
+❌ Using Geolocation without handling permission denial
+
+❌ Using Canvas for logos
+
+❌ Forgetting browser compatibility checks
+
+❌ Not providing fallback content
+
+---
+
+# Real World Applications
+
+| Website     | HTML5 API Used  |
+| ----------- | --------------- |
+| Google Maps | Geolocation     |
+| Gmail       | Web Storage     |
+| Trello      | Drag and Drop   |
+| Canva       | Canvas & SVG    |
+| YouTube     | HTML5 Video API |
+
+---
+
+# Advantages of HTML5 APIs
+
+* Faster websites
+* Interactive UI
+* Better user experience
+* No plugins required
+* Cross-platform support
+
+---
+
+# Limitations
+
+* Some APIs require JavaScript.
+* Some features need user permission.
+* Browser support varies in older browsers.
+* Browser storage should not hold confidential information.
+
+---
+
+# Interview Questions
+
+### 1. What does API stand for?
+
+**Answer:** Application Programming Interface.
+
+---
+
+### 2. What are HTML5 APIs?
+
+**Answer:** Browser features that extend HTML and allow web pages to access advanced functionality.
+
+---
+
+### 3. Name five HTML5 APIs.
+
+* Web Storage API
+* Geolocation API
+* Drag and Drop API
+* Canvas API
+* SVG
+
+---
+
+### 4. Which API stores data in the browser?
+
+**Answer:** Web Storage API.
+
+---
+
+### 5. Difference between localStorage and sessionStorage?
+
+**Answer:**
+
+* localStorage stores data until it is manually removed.
+* sessionStorage stores data only while the browser tab remains open.
+
+---
+
+### 6. Which API gets the user's location?
+
+**Answer:** Geolocation API.
+
+---
+
+### 7. Which API is used for drawing graphics?
+
+**Answer:** Canvas API.
+
+---
+
+### 8. What does SVG stand for?
+
+**Answer:** Scalable Vector Graphics.
+
+---
+
+### 9. Which is better for logos: Canvas or SVG?
+
+**Answer:** SVG.
+
+---
+
+### 10. Is JavaScript required for most HTML5 APIs?
+
+**Answer:** Yes.
+
+---
+
+# Revision Summary
+
+✔ API = Application Programming Interface
+
+✔ HTML5 APIs extend browser functionality.
+
+✔ localStorage = Permanent browser storage.
+
+✔ sessionStorage = Temporary browser storage.
+
+✔ Geolocation = User location.
+
+✔ Drag & Drop = Move elements with the mouse.
+
+✔ Canvas = Draw graphics.
+
+✔ SVG = Scalable graphics.
+
+✔ Modern browsers support most HTML5 APIs.
+
+✔ Use HTML5 APIs responsibly and securely.
+
+---
+
+# Learning Outcome
+
+After completing Day 08, I can:
+
+* Explain HTML5 APIs.
+* Store data using Web Storage.
+* Access user location.
+* Build drag-and-drop interfaces.
+* Draw graphics using Canvas.
+* Create scalable graphics using SVG.
+* Understand where and when to use each HTML5 API.
+
+---
+
+## Next Step
+
+Continue with practical examples:
+
+* `web_storage.html`
+* `geolocation.html`
+* `drag_drop.html`
+* `canvas.html`
+* `svg.html`
+* `mini_project.html`
